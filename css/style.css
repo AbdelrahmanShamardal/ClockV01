@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: black; */
+    font-family: Poppins;
+}
+
+
+body {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%); */
+    background: #091921;
+}
+
+.clock {
+    display: flex;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border : solid white 10px ;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.clock .center {
+    display: flex;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: solid white 1px;
+    border-radius: 50%;
+    background-color: white;
+    text-shadow: 0 0  30px white;
+    z-index: 11;
+}
+
+.clock .hand {
+    position: absolute;
+    display: flex;
+    right: 50%;
+    bottom: 50%;
+    transform: translateX(50%);
+    /* transform :rotate(0deg); */
+    transform-origin: bottom;
+    border: solid 1px  #fff;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; 
+    z-index: 10;
+    transition: all .05s;
+    transition-timing-function: cubic-bezier(0.1,2.07, 0.58, 1);
+    
+
+} 
+
+.clock  .hand.seconds {
+    
+    height : 45%;
+    width: 2px ;
+    background : #fff ;
+    background: #00FF78;
+    border:solid #00FF78 1px ;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+    
+    
+}
+
+.clock .hand.minutes {
+    height : 40%;
+    width: 5px ;
+    /* background : #FFCB2C; */
+    background : #2CCAFF;
+    border: solid 1px  #2CCAFF;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.clock  .hand.hours {
+    height : 35%;
+    width: 8px ;
+    background : #000;
+    border: solid 1px  #000;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+  
+  
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+
+  a {
+    text-decoration: none ;
+    font-weight:600;
+    color: #677eff;
+    color : #143749;
+    color: #14374F;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    top:87%;
+    text-transform: uppercase;
+    font-size: 15px ;
+    /* border : solid white 2px ;
+    border-radius: 50px ;
+    padding: 5px 10px ; */
+  }
